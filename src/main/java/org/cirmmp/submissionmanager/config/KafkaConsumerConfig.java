@@ -53,12 +53,12 @@ class KafkaConsumerConfig {
         return factory;
     }
 
-    public ConsumerFactory<String, Job> jobConsumerFactory() {
+    /*public ConsumerFactory<String, Job> jobConsumerFactory() {
         Map<String, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "reflectoring-sendjobs");
         return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(), new JsonDeserializer<>(Job.class));
-    }
+    }*/
     public ConsumerFactory<String, JsonNode> jsonConsumerFactory() {
         Map<String, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
@@ -66,12 +66,12 @@ class KafkaConsumerConfig {
         return new DefaultKafkaConsumerFactory<>(props, new StringDeserializer(), new JsonDeserializer<>(JsonNode.class));
     }
 
-    @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, Job> jobKafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, Job> factory = new ConcurrentKafkaListenerContainerFactory<>();
-        factory.setConsumerFactory(jobConsumerFactory());
-        return factory;
-    }
+//    @Bean
+//    public ConcurrentKafkaListenerContainerFactory<String, Job> jobKafkaListenerContainerFactory() {
+//        ConcurrentKafkaListenerContainerFactory<String, Job> factory = new ConcurrentKafkaListenerContainerFactory<>();
+//        factory.setConsumerFactory(jobConsumerFactory());
+//        return factory;
+//    }
     @Bean
     public ConcurrentKafkaListenerContainerFactory<String, JsonNode> jsonKafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, JsonNode> factory = new ConcurrentKafkaListenerContainerFactory<>();
@@ -79,12 +79,12 @@ class KafkaConsumerConfig {
         return factory;
     }
 
-    @Bean
+    /*@Bean
     public ConcurrentKafkaListenerContainerFactory<String, String> kafkaJsonListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, String> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
         factory.setMessageConverter(new StringJsonMessageConverter());
         return factory;
-    }
+    }*/
 }
