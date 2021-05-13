@@ -1,0 +1,25 @@
+POST http://localhost:8081/
+Content-Type: application/json
+
+{
+  "name": "pippo12344563222",
+  "tag": "pippopin",
+  "directory" : "/Volumes/SSDesterno/test/nextflow",
+  "mail" : "andreagia71@gmail.com",
+  "command" : "submit"
+
+}
+
+###
+### Send POST request with json body
+POST http://localhost:8081/
+Content-Type: application/json
+
+{
+  "name": "pippo12344563222",
+  "tag": "pippopin",
+  "directory" : "/Volumes/SSDesterno/test/nextflow",
+  "mail" : "andreagia71@gmail.com",
+  "command" : "check"
+
+}
