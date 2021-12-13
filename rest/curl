@@ -1,0 +1,4 @@
+
+
+
+curl -X POST -H "Content-Type: application/json" -d '{"name": "pippo12344563222", "tag": "pippopin", "directory" : "/Volumes/SSDesterno/test/nextflow", "mail" : "andreagia71@gmail.com", "command" : "submit" }' http://localhost:8081
