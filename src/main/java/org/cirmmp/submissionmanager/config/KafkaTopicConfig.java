@@ -9,6 +9,7 @@ import org.springframework.kafka.config.TopicBuilder;
 @Configuration
 class KafkaTopicConfig {
 
+
     @Value("${io.reflectoring.kafka.topic-1}")
     private String topic1;
 
