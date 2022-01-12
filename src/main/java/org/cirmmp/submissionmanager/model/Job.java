@@ -16,4 +16,5 @@ public class Job {
     private String directory;
     private String mail;
     private String command;
+    private String exec;
 }
