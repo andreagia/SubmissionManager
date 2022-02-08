@@ -29,7 +29,7 @@ public class KafkaListeners {
         LOG.info("-------STATUS ------------ [{}]", statusj);
         List<JobStatus> jobs = new ArrayList<>();
         findRepository.findAll().forEach(jobs::add);
-        jobs.forEach(System.out::println);
+        //jobs.forEach(System.out::println);
         if (findj != null) {
             Optional<JobStatus> ftag = findRepository.findByTag(findj.asText());
             if (ftag.isPresent()) {
