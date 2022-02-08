@@ -22,7 +22,7 @@ public class KafkaListeners {
 
     @KafkaListener(id = "1", topics = "reflectoring-receivejobs", groupId = "reflectoring-receivejobs-mc", containerFactory = "jsonKafkaListenerContainerFactory")
     void listenerWithMessageConverter(JsonNode json) {
-        //LOG.info("MessageConverterUserListener [{}]", json);
+        LOG.info("MessageConverterUserListener [{}]", json);
         JsonNode findj = searchForEntity(json, "tag");
         JsonNode statusj = searchForEntity(json, "status");
         LOG.info("-------FIND ------------ [{}]", findj);
