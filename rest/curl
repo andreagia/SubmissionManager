@@ -6,7 +6,3 @@ curl -X POST -H "Content-Type: application/json" -d '{"name": "pippo12344563222"
 curl -X POST -H "Content-Type: application/json" -d '{"name": "pippo12344563222", "tag": "pippopin", "directory" : "/Volumes/SSDesterno/test/nextflow", "mail" : "andreagia71@gmail.com", "command" : "submit" }' http://10.10.10.204:8081
 
 curl -X POST -H "Content-Type: application/json" -d '{"name": "pippo12344563222", "tag": "pippopin", "directory" : "/nfs_homes/webenmr/script", "mail" : "andreagia71@gmail.com", "command" : "check" "exec" : "tutorial.nf"}' http://10.10.10.204:8081
-
-curl -X POST -H "Content-Type: application/json" -d '{"name": "pippo12344563222", "tag": "pippotag1", "directory" : "/nfs_homes/webenmr/runwebenmr/user_497/new_project_1642429657/amber/pippo/input/input_1", "mail" : "andreagia71@gmail.com", "command" : "submit", "exec" : "runamber.nf"}' http://10.10.10.204:8081
-
-curl -X POST -H "Content-Type: application/json" -d '{"name": "pippo12344563222", "tag": "pippopin", "directory" : "/mnt/pynmr_nfs_volume/pynmr/webenmr/user_497/new_project_1642429657/amber/pippo/input/input_1", "mail" : "andreagia71@gmail.com", "command" : "submit", "exec" : "runamber.nf"}' http://10.10.10.204:8081

@@ -60,9 +60,9 @@ public class WebSubmitController {
         if(job.getCommand().equals("check")){
             Optional<JobStatus> jobstag = findRepository.findByTag(job.getTag());
             if(jobstag.isPresent()){
-                JobStatus jobstagr = jobstag.get();
-                log.info("CHECK: {}",jobstagr);
-                return new ResponseEntity<>(jobstagr, HttpStatus.OK);
+                JobStatus _jobstag = jobstag.get();
+                log.info("CHECK: {}",_jobstag);
+                return new ResponseEntity<>(_jobstag, HttpStatus.OK);
             } else {
                 return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
             }
